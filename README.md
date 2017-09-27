@@ -1,5 +1,6 @@
-# netquarium
-A planned "smart" aquarium monitoring system based on commodity I.O.T hardware.
+# netquarium-base
+A planned "smart" aquarium monitoring system based on commodity I.O.T hardware. This repo is for the base of the project
+(the hardware that connects to the aquarium) For the corresponding web application see: https://github.com/conorf50/netquarium-app
 ### Introduction:
 Netquarium will allow a fishkeeper to remotely monitor an aquarium through the Internet using a web applicaton based on Javascript and MongoDB
 ### Is this necessary?
