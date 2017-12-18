@@ -6,8 +6,32 @@ Date: December 5 2017
 ~
 
 This sketch configures uses a TMP102 temperature sensor and a series of other sensors to monitor an aquarium.
-The full setup can be found at <insert Gitgub here>
+The full setup can be found at https://github.com/conorf50/netquarium
 
+------- PINOUTS --------
+Device    ----     Arduino
+TMP102:
+- SDA              Pin A4
+- SCL              Pin A5
+- ALT              Pin A3
+- VCC              3.3v   IMPORTANT!!!
+- GND              GND
+- ADD0             Not Connected
+LDR Light Level:
+ Pin A1
+Water Level:
+ Pin A0
+Feeder Status:
+ Pin 2
+C02 Level: 
+ Pin A2
+Heater Pin
+ Pin 4
+Light Pin
+ Pin 5
+ 
+ 
+ 
 Resources:
 Wire.h (included with Arduino IDE)
 SparkFunTMP102.h
