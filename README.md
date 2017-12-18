@@ -1,8 +1,9 @@
 # netquarium
+
 ### Introduction:
 A "smart" aquarium monitoring system based on commodity I.O.T hardware and the cloud4Rpi cloud platform. This project allows a fishkeeper to use a simple web interface to remotely monitor an aquarium and control the heater and lights. The web dashboard displays the data from the aquarium in a easy to understand manner. 
 ### Is this necessary?
-For most people, this setup is not necessary. But if you are a 'hardcore' fish keeper, then keeping tabs on an aquarium from afar may be helpful.
+For most people, this setup is not necessary. But if you are a 'hardcore' fish keeper (or interested in jumping on the I.O.T bandwagon and connecting some useless stuff to the Internet) then keeping tabs on an aquarium from afar may be helpful.
 
 
 ### Install Guide
