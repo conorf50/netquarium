@@ -29,7 +29,7 @@ import serial
 DEVICE_TOKEN = '9zkCiNZzbMhs6eCiAT2jW8Fpm'
 
 # Constants
-DATA_SENDING_INTERVAL = 5  # secs
+DATA_SENDING_INTERVAL = 2.5  # secs
 DIAG_SENDING_INTERVAL = 10  # secs
 POLL_INTERVAL = 1  # 1000ms
 
@@ -80,6 +80,10 @@ def read_serial_co2Level():
     co2Level = serialco2Level
     return co2Level
 
+def read_serial_lightLevel():
+    lightLevel = seriallightLevel
+    return lightLevel
+
 def read_serial_feederStatus():
     FEEDER_EMPTY_STATUS = serialfeederEmpty
     return FEEDER_EMPTY_STATUS
@@ -92,7 +96,6 @@ def read_serial_heaterStatus():
 def read_serial_lightStatus():
     lightStatus = seriallightStatus
     return lightStatus
-
     
 
 
@@ -117,7 +120,7 @@ def main():
         },
  	'Light Level': {
             'type': 'numeric',
-            'bind': read_serial_heaterStatus
+            'bind': read_serial_lightLevel
         },
  	'Light Status': {
  	    'type': 'numeric',
@@ -131,6 +134,11 @@ def main():
             'type': 'numeric',
             'bind': read_serial_temp
         },
+        'Heater Status': {
+            'type': 'numeric',
+            'bind': read_serial_heaterStatus
+        },
+
     }
 
     diagnostics = {
@@ -153,6 +161,7 @@ def main():
         data_timer = 0
         diag_timer = 0
         while True:
+            readFromSerial()
             if data_timer <= 0:
                 device.publish_data()
                 data_timer = DATA_SENDING_INTERVAL
