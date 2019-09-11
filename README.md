@@ -24,8 +24,7 @@ This is an ongoing project so instructions are likely to change. The current ins
 5. Connect the Arduino to the Pi and connect the Pi to the internet.
 6. cd into the project directory and run the script with Python 3.
 
-Make sure that the key is changed first!
-
+Make sure that the device token is changed first!
 
 7. Go to the [cloud4rpi dashboard](https://cloud4rpi.io/control-panels), click on 'New Control Panel' and add widgets and graphs to the dashboard. The widgets get data from the sources defined in the python file.
 
